@@ -41,8 +41,12 @@ class OrderType
     public const MARKET = 'Market';
 
     public const STOP_LIMIT = 'StopLimit';
-
+    
     public const STOP_LOSS = 'StopLoss';
+    
+    public const STOP_LOSS_NEW = 'stop_loss';
+
+    public const STOP_LIMIT_NEW = 'stop_limit';
 
     /**
      * Gets allowable values of the enum
@@ -54,7 +58,9 @@ class OrderType
             self::LIMIT,
             self::MARKET,
             self::STOP_LIMIT,
-            self::STOP_LOSS
+            self::STOP_LOSS,
+            self::STOP_LOSS_NEW,
+            self::STOP_LIMIT_NEW
         ];
     }
 }
