@@ -23,7 +23,7 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
     }
   ],
   "require": {
-    "konfig/snaptrade-php-sdk": "1.26.13"
+    "konfig/snaptrade-php-sdk": "2.0.3"
   }
 }
 ```
@@ -91,6 +91,7 @@ Class | Method | HTTP request | Description
 *AuthenticationApi* | [**listSnapTradeUsers**](docs/Api/AuthenticationApi.md#listsnaptradeusers) | **GET** /snapTrade/listUsers | List SnapTrade users
 *AuthenticationApi* | [**loginSnapTradeUser**](docs/Api/AuthenticationApi.md#loginsnaptradeuser) | **POST** /snapTrade/login | Login user &amp; generate connection link
 *AuthenticationApi* | [**registerSnapTradeUser**](docs/Api/AuthenticationApi.md#registersnaptradeuser) | **POST** /snapTrade/registerUser | Create SnapTrade user
+*AuthenticationApi* | [**resetSnapTradeUserSecret**](docs/Api/AuthenticationApi.md#resetsnaptradeusersecret) | **POST** /snapTrade/resetUserSecret | Obtain a new user secret for a user
 *ConnectionsApi* | [**detailBrokerageAuthorization**](docs/Api/ConnectionsApi.md#detailbrokerageauthorization) | **GET** /authorizations/{authorizationId} | Get brokerage authorization details
 *ConnectionsApi* | [**listBrokerageAuthorizations**](docs/Api/ConnectionsApi.md#listbrokerageauthorizations) | **GET** /authorizations | List all brokerage authorizations for the user
 *ConnectionsApi* | [**removeBrokerageAuthorization**](docs/Api/ConnectionsApi.md#removebrokerageauthorization) | **DELETE** /authorizations/{authorizationId} | Delete brokerage authorization
@@ -106,7 +107,7 @@ Class | Method | HTTP request | Description
 *ReferenceDataApi* | [**getSecurityTypes**](docs/Api/ReferenceDataApi.md#getsecuritytypes) | **GET** /securityTypes | List of all security types
 *ReferenceDataApi* | [**getStockExchanges**](docs/Api/ReferenceDataApi.md#getstockexchanges) | **GET** /exchanges | List exchanges
 *ReferenceDataApi* | [**getSymbols**](docs/Api/ReferenceDataApi.md#getsymbols) | **POST** /symbols | Search for symbols
-*ReferenceDataApi* | [**getSymbolsByTicker**](docs/Api/ReferenceDataApi.md#getsymbolsbyticker) | **GET** /symbols/{ticker} | Get details of a symbol by the ticker
+*ReferenceDataApi* | [**getSymbolsByTicker**](docs/Api/ReferenceDataApi.md#getsymbolsbyticker) | **GET** /symbols/{query} | Get details of a symbol by the ticker or the universal_symbol_id
 *ReferenceDataApi* | [**listAllBrokerageAuthorizationType**](docs/Api/ReferenceDataApi.md#listallbrokerageauthorizationtype) | **GET** /brokerageAuthorizationTypes | List of all brokerage authorization types
 *ReferenceDataApi* | [**listAllBrokerages**](docs/Api/ReferenceDataApi.md#listallbrokerages) | **GET** /brokerages | List brokerages
 *ReferenceDataApi* | [**listAllCurrencies**](docs/Api/ReferenceDataApi.md#listallcurrencies) | **GET** /currencies | List currencies
@@ -223,7 +224,7 @@ Class | Method | HTTP request | Description
 - [SymbolQuery](docs/Model/SymbolQuery.md)
 - [SymbolsQuotesInner](docs/Model/SymbolsQuotesInner.md)
 - [TargetAsset](docs/Model/TargetAsset.md)
-- [TimeInForce](docs/Model/TimeInForce.md)
+- [TimeInForceStrict](docs/Model/TimeInForceStrict.md)
 - [Trade](docs/Model/Trade.md)
 - [TradeExecutionStatus](docs/Model/TradeExecutionStatus.md)
 - [TradeImpact](docs/Model/TradeImpact.md)
